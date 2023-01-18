@@ -19,12 +19,12 @@ function getResult(query) {
 </script>
 
 <template>
-  <h1 class="description">
+  <h1 class="description text-xl text-center md:text-2xl lg:text-3xl">
     Using The Movie Database API Movie Search with Axios
   </h1>
 
   <input
-    class="searchBar"
+    class="searchBar w-full max-w-sm py-2 px-4 outline-none rounded-lg text-gray-900"
     type="text"
     v-model="query"
     @keyup="getResult(query)"

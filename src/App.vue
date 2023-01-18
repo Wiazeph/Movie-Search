@@ -20,7 +20,9 @@ getGenres();
 </script>
 
 <template>
-  <header>
+  <header
+    class="mt-4 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12 mb-10 sm:mb-12 md:mb-14 lg:mb-16 xl:mb-20 flex-col gap-8 sm:gap-9 md:gap-10 lg:gap-11 xl:gap-12"
+  >
     <SearchBar
       @get-results="
         (content) => {
@@ -30,9 +32,14 @@ getGenres();
     />
   </header>
 
-  <main>
+  <main class="mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
     <MovieLists v-if="genres" :setresults="results" :category="genres" />
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+header,
+main {
+  @apply container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex items-center justify-center;
+}
+</style>
