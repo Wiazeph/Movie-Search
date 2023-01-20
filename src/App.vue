@@ -37,9 +37,4 @@ getGenres();
   </main>
 </template>
 
-<style scoped>
-header,
-main {
-  @apply container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex items-center justify-center;
-}
-</style>
+<style scoped></style>

@@ -20,17 +20,17 @@ function categoryFilter(genre_ids) {
     class="movies grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6 xl:gap-8"
   >
     <div
-      class="movie p-5 w-full bg-[#2a2c3c] rounded-lg flex flex-col items-center justify-center gap-4 border-[#3d3d50] border-[3px] border-solid]"
+      class="movie p-5 w-full bg-[#2a2c3c] rounded-lg flex flex-col items-center justify-center gap-4 border-[#3d3d50] border-[3px] border-solid"
       v-for="result in setresults"
       :key="result.id"
     >
-      <div class="movie-img w-full relative overflow-hidden">
+      <div class="movie-img w-full relative overflow-hidden group">
         <img
           class="w-full"
           :src="'http://image.tmdb.org/t/p/w500/' + result.poster_path"
         />
         <div
-          class="movie-info absolute z-10 -bottom-full left-0 w-full h-full transition-all duration-300 ease-in-out"
+          class="movie-info absolute z-10 -bottom-full left-0 w-full h-full transition-all duration-300 ease-in-out group-hover:bottom-0 bg-[linear-gradient(0deg,rgb(0,0,0)_0%,rgba(0,0,0,0)_100%)]"
         >
           <div
             class="movie-info-details absolute bottom-3 left-3 z-20 flex flex-col gap-3 w-3/4"
@@ -58,13 +58,4 @@ function categoryFilter(genre_ids) {
   </div>
 </template>
 
-<style scoped>
-.movie-img:hover .movie-info {
-  bottom: 0;
-}
-.movie-info {
-  background-color: #000;
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%)
-    repeat scroll 0 0;
-}
-</style>
+<style scoped></style>
