@@ -9,8 +9,9 @@ const emits = defineEmits(["getResults"]);
 function getResult(query) {
   axios
     .get(
-      "https://api.themoviedb.org/3/search/movie?api_key=ce69cf9a4d49e89a157595ab1e34c07e&query=" +
-        query
+      `https://api.themoviedb.org/3/search/movie?api_key=${
+        import.meta.env.VITE_API
+      }&query=` + query
     )
     .then((response) => {
       emits("getResults", response.data.results);

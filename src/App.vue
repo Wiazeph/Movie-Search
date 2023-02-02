@@ -11,7 +11,9 @@ const results = ref([]);
 const getGenres = () =>
   axios
     .get(
-      "https://api.themoviedb.org/3/genre/movie/list?api_key=ce69cf9a4d49e89a157595ab1e34c07e&language=en-US"
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=${
+        import.meta.env.VITE_API
+      }&language=en-US`
     )
     .then((response) => {
       genres.value = response.data.genres;
