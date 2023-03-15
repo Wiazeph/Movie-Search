@@ -20,8 +20,10 @@ function getResult(query) {
 </script>
 
 <template>
-  <h1 class="description text-xl text-center md:text-2xl lg:text-3xl">
-    Using The Movie Database API Movie Search with Axios
+  <h1
+    class="description text-xl text-center md:text-2xl lg:text-3xl xl:text-4xl"
+  >
+    Movie Search
   </h1>
 
   <input
